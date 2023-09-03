@@ -1,26 +1,31 @@
 ---
 const jobs = [
   {
-    title: "Product Manager",
-    company: "Amazon",
-    timeRange: "2017-Present",
+    title: "Full Stack Developer",
+    company: "Integrated Eco Strategy",
+    timeRange: "2/2023 - Present",
     description:
-      "As a product manager at Amazon, I was responsible for the development and execution of the company's product roadmap. This included setting goals and objectives, defining features, and working with cross-functional teams to bring new products and updates to market.",
+      "As a full stack developer at Integrated Eco Strategy, I am responsible for developing and maintaining the company's health materials management platform. This includes implementing new features, fixing bugs, and optimizing the app for performance and scalability.",
   },
   {
-    title: "Product Designer",
-    company: "Airbnb",
-    timeRange: "2014-2017",
+    title: "Full Stack Developer",
+    company: "Validaid",
+    timeRange: "12/2022 – 05/2023",
     description:
-      "As a product designer at Airbnb, I was responsible for designing and developing new products and features for the company. This included conducting user research, creating wireframes and prototypes, and working with cross-functional teams to bring my designs to life.",
+      "While at Validaid, I carried out a variety of tasks, namely leading frontend development for the company's web app and ensuring that the app was accessible and responsive across all devices. I also worked on the company's backend, which was built with Node.js and MariaDB.",
   },
   {
-    title: "iOS Software Engineer",
-    company: "Facebook",
-    timeRange: "2012-2014",
+    title: "Frontend Developer",
+    company: "The Collab Lab",
+    timeRange: "01/2023 - 03/2023",
     description:
-      "As an iOS software engineer at Facebook, I was responsible for developing and maintaining the company's iOS app. This included designing and implementing new features, fixing bugs, and optimizing the app for performance and scalability.",
+      "As a member of The Collab Lab's 20223 cohort, I worked with a team of developers to build a full stack predicative shopping list application. I was responsible for leading frontend development and ensuring that the app was accessible and responsive across all devices.",
   },
+  {
+    title: "Past Experience Charcuterie",
+    company: "Various farms, land conservancies, and small businesses",
+    description: "I have worked as a wilderness therapy field guide, fruit picker, tree farmer, land manager and more. All of these past careers set me up for success as a developer with experience constantly learning new skills, working as an empathetic human, and earning trust from work leaders."
+  }
 ];
 ---
 
@@ -47,7 +52,7 @@ const jobs = [
                       <img
                         decoding="async"
                         loading="lazy"
-                        src={`images/${j.company.toLowerCase()}.svg`}
+                        src={`images/${j.company.toLowerCase().split(' ')[0]}.jpeg`}
                         class="w-5 h-5 rounded-full ring-1 shadow-md shadow-primary-800/5 ring-primary-900"
                       />
                       <h3 class="text-base font-semibold tracking-tight sm:max-w-none sm:text-lg max-w-[20ch] text-primary-100">
