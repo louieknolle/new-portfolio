@@ -4,47 +4,47 @@ import Layout from "@layout/Layout.astro";
 
 const projects = [
   {
-    name: "DataScape",
+    name: "Venture Splorin",
     description:
-      "A data visualization and analysis tool that allows users to easily explore and understand large datasets.",
-    link: "https://github.com/something/something",
+      "An adventure finding tool that helps users discover new places to explore.",
+    link: "https://github.com/louieknolle/WorkingCapstoneTitle",
   },
   {
-    name: "CodeHub",
+    name: "Artist Portfolio",
     description:
       "A collaborative code development platform that enables teams to work together on projects in real-time.",
-    link: "codehub.tech",
+    link: "https://andyknolle.com",
   },
   {
-    name: "SmartHome",
+    name: "Smart Shopping List",
     description:
-      "A home automation system that connects and controls various devices and appliances through a single intuitive app.",
-    link: "github.com",
+      "A predictive shopping app that makes shopping list suggestions based on purchasing habits.",
+    link: "https://tcl52-smartshoppinglist.netlify.app/",
   },
   {
-    name: "AI Assistant",
+    name: "Quotes Trivia",
     description:
-      "A virtual assistant that uses artificial intelligence to help users manage their daily tasks and schedule.",
-    link: "smartyaiassistant.dev",
+      "A quiz game featuring famous quotes and score board tracking.",
+    link: "https://quotes-trivia.netlify.app/",
   },
-  {
-    name: "VirtualEvent",
-    description:
-      "A platform for hosting and attending virtual events, conferences, and meetings. It features a range of tools for networking, collaboration, and engagement.",
-    link: "github.com",
-  },
-  {
-    name: "CloudBoost",
-    description:
-      "A cloud-based platform that helps businesses optimize and accelerate their website performance.",
-    link: "cloudboost.tech",
-  },
+  // {
+  //   name: "VirtualEvent",
+  //   description:
+  //     "A platform for hosting and attending virtual events, conferences, and meetings. It features a range of tools for networking, collaboration, and engagement.",
+  //   link: "github.com",
+  // },
+  // {
+  //   name: "CloudBoost",
+  //   description:
+  //     "A cloud-based platform that helps businesses optimize and accelerate their website performance.",
+  //   link: "cloudboost.tech",
+  // },
 ];
 ---
 
 <Layout
   pageTitle="Projects"
-  description="Things I’ve created to make the world around me a little different"
+  description="Things I’ve created"
   type="content"
 >
   <main class="px-8 pt-16 mx-auto max-w-6xl sm:pt-24 lg:px-16">
@@ -53,13 +53,10 @@ const projects = [
         <h1
           class="text-4xl font-bold tracking-tighter sm:text-5xl max-w-[25ch]"
         >
-          Things I’ve created to make the world around me a little different
+          Things I’ve created 
         </h1>
         <p class="text-primary-300 max-w-[65ch]">
-          I’ve worked on tons of little projects over the years but these are
-          the ones that I’m most proud of. Many of them are open-source, so if
-          you see something that piques your interest, check out the code and
-          contribute if you have ideas for how it can be improved.
+          Click to check them out!
         </p>
       </div>
       <ProjectsGrid projects={projects} />

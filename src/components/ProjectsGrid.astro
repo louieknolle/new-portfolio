@@ -14,8 +14,7 @@ const { projects } = Astro.props;
 <ul role="list" class="grid gap-x-4 gap-y-8 grid-cols-fill-16">
   {
     projects.map((p: Project) => (
-      // you can add href={p.link} target="_blank"
-      <a class="transition-all group" href="#">
+      <a class="transition-all group" href={p.link} target="_blank">
         <li class="relative w-full rounded-2xl shadow-md transition-all duration-200 ease-in-out hover:scale-105 h-[300px] shadow-black">
           <img
             decoding="async"
@@ -30,9 +29,6 @@ const { projects } = Astro.props;
             <h2 class="text-2xl font-bold tracking-tight text-white text-shadow-name">
               {p.name}
             </h2>
-            <p class="text-ellipsis line-clamp-3 text-[#e4e4e7ff] text-shadow-desc">
-              {p.description}
-            </p>
             <div class="flex flex-row gap-1 items-center">
               <svg
                 class="w-6 h-6 hover:cursor-pointer stroke-[0.5] stroke-[#fafafaff] hover:stroke-accent-400"
@@ -59,6 +55,9 @@ const { projects } = Astro.props;
             </div>
           </div>
         </li>
+        <p class="text-ellipsis line-clamp-3 ] pt-2">
+              {p.description}
+            </p>
       </a>
     ))
   }
@@ -76,5 +75,11 @@ const { projects } = Astro.props;
   }
   .text-shadow-name {
     text-shadow: 0px 1px 2px black;
+  }
+  .text-description {
+    color: #333333; /* Dark gray */
+  }
+  .text-link {
+    color: #007acc; /* A shade of blue for links */
   }
 </style>
