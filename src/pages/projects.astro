@@ -4,16 +4,16 @@ import Layout from "@layout/Layout.astro";
 
 const projects = [
   {
-    name: "'Venture 'Splorin'",
+    name: "Venture Splorin",
     description:
       "An adventure finding tool that helps users discover new places to explore.",
-    link: "github.com/louieknolle",
+    link: "https://github.com/louieknolle/WorkingCapstoneTitle",
   },
   {
     name: "Artist Portfolio",
     description:
       "A collaborative code development platform that enables teams to work together on projects in real-time.",
-    link: "andyknolle.com",
+    link: "https://andyknolle.com",
   },
   {
     name: "Smart Shopping List",
@@ -44,7 +44,7 @@ const projects = [
 
 <Layout
   pageTitle="Projects"
-  description="Things I’ve created to make the world around me a little different"
+  description="Things I’ve created"
   type="content"
 >
   <main class="px-8 pt-16 mx-auto max-w-6xl sm:pt-24 lg:px-16">
@@ -53,13 +53,10 @@ const projects = [
         <h1
           class="text-4xl font-bold tracking-tighter sm:text-5xl max-w-[25ch]"
         >
-          Things I’ve created to make the world around me a little different
+          Things I’ve created 
         </h1>
         <p class="text-primary-300 max-w-[65ch]">
-          I’ve worked on tons of little projects over the years but these are
-          the ones that I’m most proud of. Many of them are open-source, so if
-          you see something that piques your interest, check out the code and
-          contribute if you have ideas for how it can be improved.
+          Click to check them out!
         </p>
       </div>
       <ProjectsGrid projects={projects} />
