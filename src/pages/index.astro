@@ -25,26 +25,11 @@ const lastThreePosts = allPosts
   description=" My name is Louie, a nature-loving developer living in the woods of western Massachusetts."
   type="website"
 >
-  <main class="flex flex-col gap-8 items-center px-8 mx-auto max-w-[75ch]">
+  <main class="flex flex-col gap-16 items-center px-8 mx-auto max-w-[75ch]">
     <MainIntro />
-    <!-- <FeaturedBlogsContainer>
-      {
-        lastThreePosts.map((p) => (
-          <FeaturedBlogPost
-            date={new Date(p.frontmatter.pubDate).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
-            readTime={readingTime(p.rawContent()).text}
-            title={p.frontmatter.title}
-            description={p.frontmatter.description}
-            tags={p.frontmatter.tags}
-            url={p.url}
-          />
-        ))
-      }
-    </FeaturedBlogsContainer> -->
+    <FeaturedBlogsContainer>
+      <FeaturedBlogPost/>
+    </FeaturedBlogsContainer>
     <ContactForm />
   </main>
 </Layout>

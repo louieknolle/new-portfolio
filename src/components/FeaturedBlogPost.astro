@@ -2,32 +2,33 @@
 import Tag from "./Tag.astro";
 
 interface Props {
-  date: string;
-  readTime: string;
-  title: string;
-  description: string;
-  tags: string[];
+  date?: string;
+  readTime?: string;
+  title?: string;
+  description?: string;
+  tags?: string[];
   url?: string;
 }
 
-const { date, readTime, title, description, tags, url } = Astro.props;
+const { date, readTime, title, description, url } = Astro.props;
+const tags = ['Next.js', 'Typescript', 'Tailwind CSS', 'Markdown']
 ---
 
-<a href={url} class="transition hover:scale-[101%] duration-300" rel="prefetch">
+<a href='https://www.calminthecold.com/' class="transition hover:scale-[101%] duration-300" rel="prefetch" target='_blank'>
   <div>
     <article
       class="overflow-hidden rounded-2xl divide-none shadow transition duration-300 bg-lightercontentbackground hover:bg-primary-900"
     >
       <div class="flex flex-col gap-2 py-4 px-4 sm:px-6">
-        <h3 class="text-xl font-semibold tracking-tight">{title}</h3>
-        <div class="flex flex-row gap-2 justify-start text-sm text-primary-400">
+        <h3 class="text-xl font-semibold tracking-tight">Calm in the Cold Blog</h3>
+        <!-- <div class="flex flex-row gap-2 justify-start text-sm text-primary-400">
           <time>{date}&nbsp;•</time>
           <span>{readTime}</span>
-        </div>
+        </div> -->
       </div>
 
       <div class="py-4 px-4 text-base sm:px-6">
-        {description}
+        <p class="text-primary-400">A custom blog site about my journey into cold water swimming utilizing Next.js with App Router, markdown files generated into JSON, resources for others to learn about cold water exposure.</p>
       </div>
 
       <div class="py-4 px-4 sm:px-6">
@@ -35,6 +36,7 @@ const { date, readTime, title, description, tags, url } = Astro.props;
           {tags.map((tag) => <Tag>{tag}</Tag>)}
         </ul>
       </div>
+      <img src="/images/calminthecoldblog.png" alt="Calm in the Cold Blog" class="w-full h-96 object-cover" />
     </article>
   </div>
 </a>
