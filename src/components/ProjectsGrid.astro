@@ -12,7 +12,7 @@ interface Props {
 const { projects } = Astro.props;
 ---
 
-<!-- <ul role="list" class="grid gap-x-4 gap-y-8 grid-cols-fill-16">
+ <ul role="list" class="grid gap-x-4 gap-y-8 grid-cols-fill-16">
   {
     projects.map((p: Project) => (
       <a class="transition-all group" href={p.link} target="_blank">
@@ -56,14 +56,14 @@ const { projects } = Astro.props;
             </div>
           </div>
         </li>
-        <p class="text-ellipsis line-clamp-3 ] pt-2">
+        <p class="text-ellipsis line-clamp-3 pt-2">
               {p.description}
             </p>
       </a>
     ))
   }
-</ul> -->
-<ul role="list" class="grid gap-x-4 gap-y-8 grid-cols-fill-16">
+</ul> 
+<!-- <ul role="list" class="grid gap-x-4 gap-y-8 grid-cols-fill-16">
   {projects.map((p: Project) => (
     <li class="relative w-full rounded-2xl shadow-md transition-all duration-200 ease-in-out hover:scale-105 h-[300px] shadow-black mb-16">
       <h2 class="text-2xl font-bold tracking-tight text-white text-shadow-name">
@@ -72,7 +72,7 @@ const { projects } = Astro.props;
       <img
         decoding="async"
         loading="lazy"
-        class="object-cover absolute z-10 w-3/4 max-w-3/4 h-3/4 max-h-3/4 rounded-2xl"
+        class="object-cover absolute inset-0 z-10 w-full max-w-full h-full max-h-full rounded-2xl aspect-[1/1]"
         src={`/images/${p.name.replace(/ /g, "").toLowerCase()}.png`}
         alt={`Picture of ${p.name.replace(/ /g, "").toLowerCase()}`}
       />
@@ -135,7 +135,7 @@ const { projects } = Astro.props;
       <p class="text-ellipsis line-clamp-3 pt-2">{p.description}</p>
     </li>
   ))}
-</ul>
+</ul> -->
 
 <style>
   .progressive-blur {
