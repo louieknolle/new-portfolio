@@ -1,6 +1,5 @@
 ---
 import MainContainer from "@components/MainContainer.astro";
-import ThemeSwitcher from "@components/ThemeSwitcher.astro";
 import "@fontsource/inter";
 import "@fontsource/jetbrains-mono";
 import { SEO } from "astro-seo";
@@ -41,7 +40,6 @@ const { pageTitle, description, type } = Astro.props;
     <MainContainer>
       <slot />
     </MainContainer>
-    <ThemeSwitcher />
     <style is:global>
       @tailwind base;
       @tailwind components;
