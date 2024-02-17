@@ -1,61 +1,62 @@
 ---
-import ProjectsGrid from "@components/ProjectsGrid.astro";
-import Layout from "@layout/Layout.astro";
+import ProjectsGrid from '@components/ProjectsGrid.astro'
+import Layout from '@layout/Layout.astro'
 
 const projects = [
   {
-    name: "Calm in the Cold Blog",
+    name: 'Pants or Shorts',
     description:
-      "A blog about my journey into cold water swimming and learning resources for others.",
-    link: "https://www.calminthecold.com/",
-    repo: "https://github.com/louieknolle/cold-swimming-blog"
+      'Sets users preferences and uses OpenWeather API to make clothing recommendations.',
+    link: 'https://pantsorshorts.netlify.app/',
+    repo: 'https://github.com/louieknolle/ps-parent'
   },
   {
-    name: "Artist Portfolio",
+    name: 'Calm in the Cold Blog',
     description:
-      "A custom designed client portfolio to showcase their works of art.",
-    link: "https://andyknolle.com",
-    repo: "https://github.com/louieknolle/Andy_Art_React"
+      'A blog about my journey into cold water swimming and learning resources for others.',
+    link: 'https://www.calminthecold.com/',
+    repo: 'https://github.com/louieknolle/cold-swimming-blog'
   },
   {
-    name: "Smart Shopping List",
+    name: 'Artist Portfolio',
     description:
-      "A predictive shopping app that makes shopping list suggestions based on purchasing habits.",
-    link: "https://tcl52-smartshoppinglist.netlify.app/",
-    repo: "https://github.com/louieknolle/smart-shop"
+      'A custom designed client portfolio to showcase their works of art.',
+    link: 'https://andyknolle.com',
+    repo: 'https://github.com/louieknolle/Andy_Art_React'
   },
   {
-    name: "Quotes Trivia",
+    name: 'Smart Shopping List',
     description:
-      "A quiz game featuring famous quotes and score board tracking.",
-    link: "https://quotes-trivia.netlify.app/",
-    repo: "https://github.com/louieknolle/quote-game"
+      'A predictive shopping app that makes shopping list suggestions based on purchasing habits.',
+    link: 'https://tcl52-smartshoppinglist.netlify.app/',
+    repo: 'https://github.com/louieknolle/smart-shop'
   },
+  {
+    name: 'Quotes Trivia',
+    description:
+      'A quiz game featuring famous quotes and score board tracking.',
+    link: 'https://quotes-trivia.netlify.app/',
+    repo: 'https://github.com/louieknolle/quote-game'
+  }
   // {
   //   name: "CloudBoost",
   //   description:
   //     "A cloud-based platform that helps businesses optimize and accelerate their website performance.",
   //   link: "cloudboost.tech",
   // },
-];
+]
 ---
 
-<Layout
-  pageTitle="Projects"
-  description="Things I’ve created"
-  type="content"
->
+<Layout pageTitle="Projects" description="Personal Projects" type="content">
   <main class="px-8 pt-16 mx-auto max-w-6xl sm:pt-24 lg:px-16">
     <div class="flex flex-col mt-4 space-y-8">
       <div class="flex flex-col space-y-4">
         <h1
           class="text-4xl font-bold tracking-tighter sm:text-5xl max-w-[25ch]"
         >
-          Things I’ve created 
+          Personal Projects
         </h1>
-        <p class="text-primary-300 max-w-[65ch]">
-          Click to check them out!
-        </p>
+        <p class="text-primary-300 max-w-[65ch]">Click to check them out!</p>
       </div>
       <ProjectsGrid projects={projects} />
     </div>
