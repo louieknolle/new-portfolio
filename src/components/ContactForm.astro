@@ -1,13 +1,12 @@
 ---
-
 ---
 
 <form
   action="https://api.web3forms.com/submit"
-  method="POST" 
+  method="POST"
   class="p-6 py-5 px-4 w-full rounded-2xl border sm:px-6 border-primary-700/40"
 >
-  <h2 class="flex flex-row items-center text-sm font-semibold text-primary-300">
+  <h2 class="flex flex-row items-center text-sm font-semibold text-primary-200">
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -22,55 +21,67 @@
     </svg>
     <span class="ml-3 text-lg">Contact Louie</span>
   </h2>
-  <p class="mt-2 text-sm text-primary-400">
+  <p class="mt-2 text-sm text-primary-300">
     Message me about work opportunities or just to say hi!
   </p>
-  <div class="flex flex-col gap-4 mt-6">
-    <input type="hidden" name="access_key" value="fff9dc4a-e7f1-4a77-8af8-f5c4895515d1">
+  <div class="flex flex-col gap-2 mt-6">
+    <input
+      type="hidden"
+      name="access_key"
+      value="fff9dc4a-e7f1-4a77-8af8-f5c4895515d1"
+    />
+    <label for="name" class="text-accent-400">Your Name</label>
     <input
       type="text"
       name="name"
-      placeholder="Your name"
-      aria-label="Your name"
-      required=""
-      class="flex-auto px-3 min-w-0 h-12 bg-white rounded-md border shadow-md appearance-none sm:text-sm focus:ring-4 focus:outline-none shadow-primary-800/5 border-primary-700 bg-primary-700/[0.15] text-primary-200 placeholder:text-primary-500 focus:border-accent-400 focus:ring-accent-400/10"
+      id="name"
+      placeholder="Name Namerson"
+      required
+      class="flex-auto px-3 min-w-0 h-12 dark:bg-white rounded-md border shadow-md appearance-none sm:text-sm focus:ring-4 focus:outline-none shadow-primary-800/5 border-primary-700 bg-primary-700/[0.15] text-primary-200 placeholder:text-primary-300 focus:border-accent-400 focus:ring-accent-400/10"
     />
+    <label for="email" class="text-accent-400">Your Email</label>
     <input
       type="email"
       name="email"
-      placeholder="Email"
+      id="email"
+      placeholder="email@mail.com"
       aria-label="Email"
-      required=""
-      class="flex-auto px-3 min-w-0 h-12 bg-white rounded-md border shadow-md appearance-none sm:text-sm focus:ring-4 focus:outline-none shadow-primary-800/5 border-primary-700 bg-primary-700/[0.15] text-primary-200 placeholder:text-primary-500 focus:border-accent-400 focus:ring-accent-400/10"
+      required
+      class="flex-auto px-3 min-w-0 h-12 bg-white rounded-md border shadow-md appearance-none sm:text-sm focus:ring-4 focus:outline-none shadow-primary-800/5 border-primary-700 bg-primary-700/[0.15] text-primary-200 placeholder:text-primary-300 focus:border-accent-400 focus:ring-accent-400/10"
     />
-    <!-- todo: fix textarea on chrome bg color -->
+    <label for="message" class="text-accent-400">Message</label>
     <textarea
-      required=""
+      required
       rows="4"
       placeholder="Your message ..."
       name="message"
-      aria-label="message"
-      class="p-3 min-w-0 rounded-md border shadow-md appearance-none sm:text-sm focus:ring-4 focus:outline-none border-primary-700 bg-primary-700/[0.15] text-primary-200 placeholder:text-primary-500 focus:border-accent-400 focus:ring-accent-400/10"
+      id="message"
+      class="p-3 min-w-0 w-full rounded-md border shadow-md appearance-none sm:text-sm focus:ring-4 focus:outline-none border-primary-700 bg-primary-700/[0.15] text-primary-200 placeholder:text-primary-300 focus:border-accent-400 focus:ring-accent-400/10"
     ></textarea>
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    <input
+      type="checkbox"
+      name="botcheck"
+      class="hidden"
+      style="display: none;"
+    />
     <button
-      class="flex-none py-2 px-3 text-sm font-semibold rounded-md transition active:transition-none outline-offset-2 text-primary-100 bg-primary-700 hover:bg-primary-600 active:bg-primary-700 active:text-primary-100/70"
+      class="flex-none w-1/2 self-center py-2 px-3 text-sm font-semibold rounded-md transition active:transition-none outline-offset-2 text-accent-400 bg-primary-700 hover:bg-primary-600 active:bg-primary-700 active:text-primary-100/70"
       type="submit">Send</button
     >
   </div>
 </form>
 <script>
-  const form = document.querySelector('form');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+  const form = document.querySelector('form')
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
     fetch(e.target.action, {
       method: 'POST',
       body: new FormData(e.target)
-    }).then(res => {
+    }).then((res) => {
       if (res.ok) {
-        alert('Message sent successfully!');
-        form.reset();
+        alert('Message sent successfully!')
+        form.reset()
       }
-    });
-  });
+    })
+  })
 </script>
